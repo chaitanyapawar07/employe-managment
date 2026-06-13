@@ -6,7 +6,7 @@ import {
   Building, Star, User, BarChart2, LogOut, 
   ChevronDown, ChevronRight, Monitor 
 } from 'lucide-react';
-import './navbar.css';
+import './NavBar.css';
 
 const Navbar = () => {
   const location = useLocation();
