@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../NavBar";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
