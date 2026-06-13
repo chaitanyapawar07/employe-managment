@@ -38,8 +38,8 @@ app.use("/api/leave", leaveRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/employees', employeeRoutes);
-app.use('/api/dashboard', require('./routes/dashboard'));
-app.use('/api/reports', require('./routes/reports'));
+app.use('/api/dashboard', require('./routes/dashboard'));// app.use('/api/dashboard', require('./routes/dashboard'))
+app.use('/api/reports', require('./routes/reports'));// app.use('/api/reports', require('./routes/reports'));
 app.use('/uploads', require('express').static('uploads'));
 app.use('/api/assets', assetRoutes);
 app.use('/api/notifications', notificationRoutes);
