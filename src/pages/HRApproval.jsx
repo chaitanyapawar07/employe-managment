@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import Table from '../components/Table';
-import Button from '../components/Button';
-import Loader from '../components/Loader';
+import Table from '../Table';
+import Button from '../Button';
+import Loader from '../Loader';
 
 function HRApproval() {
   const [leaves, setLeaves] = useState([]);

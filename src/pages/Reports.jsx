@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import Table from '../components/Table';
-import Card from '../components/Card';
-import Loader from '../components/Loader';
+import Table from '../Table';
+import Card from '../Card';
+import Loader from '../Loader';
 
 function Reports() {
   const [leaves, setLeaves] = useState([]);

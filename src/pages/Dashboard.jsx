@@ -14,11 +14,11 @@ import {
   FiStar,
   FiImage
 } from "react-icons/fi";
-import DepartmentSkillsChart from '../components/DepartmentSkillsChart';
-import EmployeeGrowthChart from '../components/EmployeeGrowthChart';
-import DepartmentDistributionChart from '../components/DepartmentDistributionChart';
-import LeaveStatusChart from '../components/LeaveStatusChart';
-import { QuickActions, RecentActivity } from '../components/DashboardWidgets';
+import DepartmentSkillsChart from '../DepartmentSkillsChart';
+import EmployeeGrowthChart from '../EmployeeGrowthChart';
+import DepartmentDistributionChart from '../DepartmentDistributionChart';
+import LeaveStatusChart from '../LeaveStatusChart';
+import { QuickActions, RecentActivity } from '../DashboardWidgets';
 
 function Dashboard() {
   const { user, logout, loading } = useAuth();

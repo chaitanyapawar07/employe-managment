@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Bell, Monitor, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
-import Modal from '../components/Modal'; 
+import Modal from '../Modal'; 
 import "./Notifications.css";
 
 const Notifications = () => {
