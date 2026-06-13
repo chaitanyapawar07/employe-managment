@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authMiddleware');
-const checkRole = require('../middleware/roleMiddleware');
+const authMiddleware = require('../authMiddleware');
+const checkRole = require('../roleMiddleware');
 const { applyLeave, getMyLeaves, approveLeave, rejectLeave, getAllLeaves } = require('../controllers/leaveController');
-const pool = require('../config/db');
-const { validateLeave } = require('../middleware/validate');
+const pool = require('../db');
+const { validateLeave } = require('../validate');
 
 /**
  * @swagger

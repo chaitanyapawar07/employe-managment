@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../config/db');
-const authMiddleware = require('../middleware/authMiddleware');
+const pool = require('../db');
+const authMiddleware = require('../authMiddleware');
 const multer = require('multer');
 const path = require('path');
 

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../config/db");
+const pool = require("../db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require('crypto');
@@ -255,8 +255,8 @@ router.post('/logout', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-const checkRole = require('../middleware/roleMiddleware');
-const authMiddleware = require('../middleware/authMiddleware');
+const checkRole = require('../roleMiddleware');
+const authMiddleware = require('../authMiddleware');
 
 router.get('/admin', authMiddleware, checkRole('admin'), async (req, res) => {
   res.json({ message: 'Welcome Admin!' });

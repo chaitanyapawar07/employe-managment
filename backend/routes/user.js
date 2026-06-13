@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authMiddleware');
-const pool = require('../config/db');
+const authMiddleware = require('../authMiddleware');
+const pool = require('../db');
 
 // GET /api/user/profile
 // Returns user info decoded from the JWT (no DB query needed)
