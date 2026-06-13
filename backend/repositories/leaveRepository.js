@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const pool = require('../db');
 
 const checkBalance = async (employeeId, leaveTypeId) => {
   const result = await pool.query(

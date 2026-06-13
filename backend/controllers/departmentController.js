@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const pool = require('../db');
 
 const getDepartments = async (req, res) => {
   console.log('[DEPARTMENTS] GET request received');
