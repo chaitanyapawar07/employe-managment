@@ -15,7 +15,7 @@ function ManageLeaves() {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/leave/all', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/leave/all', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLeaves(res.data);
@@ -26,7 +26,7 @@ function ManageLeaves() {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/leave/approve/${id}`, 
+      await axios.put(`https://employe-managment.onrender.com/api/leave/approve/${id}`, 
         { remarks: 'Approved by manager' },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -39,7 +39,7 @@ function ManageLeaves() {
 
   const handleReject = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/leave/reject/${id}`,
+      await axios.put(`https://employe-managment.onrender.com/api/leave/reject/${id}`,
         { remarks: 'Rejected by manager' },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -15,7 +15,7 @@ function LeaveApplication() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/leave/types', {
+    axios.get('https://employe-managment.onrender.com/api/leave/types', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     }).then(res => {
       setLeaveTypes(res.data || []);
@@ -43,7 +43,7 @@ function LeaveApplication() {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/leave/apply', {
+      await axios.post('https://employe-managment.onrender.com/api/leave/apply', {
         ...formData,
         leave_type_id: parseInt(formData.leave_type_id, 10)
       }, {

@@ -18,7 +18,7 @@ function SkillsMaster() {
   const fetchSkills = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/skills', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/skills', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSkills(res.data);
@@ -33,7 +33,7 @@ function SkillsMaster() {
     e.preventDefault();
     if (!newSkillName.trim()) return;
     try {
-      await axios.post('http://localhost:5000/api/skills', 
+      await axios.post('https://employe-managment.onrender.com/api/skills', 
         { skill_name: newSkillName },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -15,7 +15,7 @@ function LeaveHistory() {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/leave/my-leaves', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/leave/my-leaves', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLeaves(res.data);

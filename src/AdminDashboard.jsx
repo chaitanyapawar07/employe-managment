@@ -21,10 +21,10 @@ function AdminDashboard() {
   const fetchData = async () => {
     try {
       const [empRes, leaveRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/user/all', {
+        axios.get('https://employe-managment.onrender.com/api/user/all', {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        axios.get('http://localhost:5000/api/leave/all', {
+        axios.get('https://employe-managment.onrender.com/api/leave/all', {
           headers: { Authorization: `Bearer ${token}` }
         })
       ]);

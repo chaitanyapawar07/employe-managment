@@ -10,7 +10,7 @@ const useEmployee = () => {
   const getEmployees = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/user/all', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/user/all', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEmployees(res.data);

@@ -19,7 +19,7 @@ function HRApproval() {
   const fetchLeaves = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/leave/all', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/leave/all', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLeaves(res.data.filter(l => l.status === 'approved'));
@@ -32,7 +32,7 @@ function HRApproval() {
 
   const handleFinalApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/leave/final-approve/${id}`,
+      await axios.put(`https://employe-managment.onrender.com/api/leave/final-approve/${id}`,
         { remarks: 'Final approved by HR' },
         { headers: { Authorization: `Bearer ${token}` } }
       );

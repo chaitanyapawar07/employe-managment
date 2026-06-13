@@ -25,13 +25,13 @@ function CreateEmployee() {
   const fetchData = async () => {
     try {
       const [usersRes, deptsRes, skillsRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/user/all", {
+        axios.get("https://employe-managment.onrender.com/api/user/all", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/departments", {
+        axios.get("https://employe-managment.onrender.com/api/departments", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/skills", {
+        axios.get("https://employe-managment.onrender.com/api/skills", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -62,7 +62,7 @@ function CreateEmployee() {
 
     try {
       const createRes = await axios.post(
-        "http://localhost:5000/api/employees",
+        "https://employe-managment.onrender.com/api/employees",
         employee,
         {
           headers: {
@@ -78,7 +78,7 @@ function CreateEmployee() {
           formData.append("images", images[i]);
         }
         await axios.post(
-          `http://localhost:5000/api/employees/upload/${createRes.data.data.id}`,
+          `https://employe-managment.onrender.com/api/employees/upload/${createRes.data.data.id}`,
           formData,
           {
             headers: {

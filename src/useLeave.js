@@ -10,7 +10,7 @@ const useLeave = () => {
   const getMyLeaves = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/leave/my-leaves', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/leave/my-leaves', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLeaves(res.data);
@@ -22,7 +22,7 @@ const useLeave = () => {
   };
 
   const applyLeave = async (data) => {
-    const res = await axios.post('http://localhost:5000/api/leave/apply', data, {
+    const res = await axios.post('https://employe-managment.onrender.com/api/leave/apply', data, {
       headers: { Authorization: `Bearer ${token}` }
     });
     return res.data;

@@ -18,9 +18,9 @@ function AssetManagement() {
   const fetchData = async () => {
     try {
       const [assetsRes, allocRes, empRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/assets', { headers: { Authorization: `Bearer ${token}` } }),
-        axios.get('http://localhost:5000/api/assets/allocations', { headers: { Authorization: `Bearer ${token}` } }),
-        axios.get('http://localhost:5000/api/user/all', { headers: { Authorization: `Bearer ${token}` } })
+        axios.get('https://employe-managment.onrender.com/api/assets', { headers: { Authorization: `Bearer ${token}` } }),
+        axios.get('https://employe-managment.onrender.com/api/assets/allocations', { headers: { Authorization: `Bearer ${token}` } }),
+        axios.get('https://employe-managment.onrender.com/api/user/all', { headers: { Authorization: `Bearer ${token}` } })
       ]);
       setAssets(assetsRes.data);
       setAllocations(allocRes.data);
@@ -33,7 +33,7 @@ function AssetManagement() {
   const handleAddAsset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/assets', newAsset, {
+      await axios.post('https://employe-managment.onrender.com/api/assets', newAsset, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMsg('Asset added!');
@@ -47,7 +47,7 @@ function AssetManagement() {
   const handleAllocate = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/assets/allocate', allocation, {
+      await axios.post('https://employe-managment.onrender.com/api/assets/allocate', allocation, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMsg('Asset allocated!');
@@ -60,7 +60,7 @@ function AssetManagement() {
 
   const handleReturn = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/assets/return/${id}`, {}, {
+      await axios.put(`https://employe-managment.onrender.com/api/assets/return/${id}`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMsg('Asset returned!');

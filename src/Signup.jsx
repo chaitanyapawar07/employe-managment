@@ -21,7 +21,7 @@ function Signup() {
     setLoading(true);
     setMessage({ text: "", isError: false });
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", form);
+      const res = await axios.post("https://employe-managment.onrender.com/api/auth/signup", form);
       setMessage({ text: res.data.message || "Registration successful! Redirecting to login...", isError: false });
       setForm({ name: "", email: "", password: "" });
       setTimeout(() => navigate("/"), 2000);

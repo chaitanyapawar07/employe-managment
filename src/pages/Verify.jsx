@@ -8,7 +8,7 @@ function Verify() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/auth/verify-email/${token}`)
+    axios.get(`https://employe-managment.onrender.com/api/auth/verify-email/${token}`)
       .then(res => {
         setMsg(res.data.message);
         setTimeout(() => navigate('/'), 3000);

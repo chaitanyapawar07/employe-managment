@@ -21,10 +21,10 @@ function Login() {
     setError("");
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      const res = await axios.post("https://employe-managment.onrender.com/api/auth/login", { email, password });
       if (res.data && res.data.token) {
         // Fetch user profile using the new token
-        const profileRes = await axios.get("http://localhost:5000/api/user/profile", {
+        const profileRes = await axios.get("https://employe-managment.onrender.com/api/user/profile", {
           headers: { Authorization: `Bearer ${res.data.token}` }
         });
         // Set user in AuthContext (also stores tokens in localStorage)

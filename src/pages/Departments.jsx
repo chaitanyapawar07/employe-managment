@@ -18,7 +18,7 @@ function Departments() {
   const fetchDepartments = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/departments', {
+      const res = await axios.get('https://employe-managment.onrender.com/api/departments', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setDepartments(res.data);
@@ -33,7 +33,7 @@ function Departments() {
     e.preventDefault();
     if (!newDeptName.trim()) return;
     try {
-      await axios.post('http://localhost:5000/api/departments', 
+      await axios.post('https://employe-managment.onrender.com/api/departments', 
         { department_name: newDeptName },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -41,7 +41,7 @@ function AppRoutes() {
       try {
         const token = localStorage.getItem("token");
         if (!token) return;
-        const res = await axios.get("http://localhost:5000/api/notifications", {
+        const res = await axios.get("https://employe-managment.onrender.com/api/notifications", {
           headers: { Authorization: `Bearer ${token}` }
         });
         const unread = res.data.filter(n => !n.is_read).length;

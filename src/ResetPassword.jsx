@@ -11,7 +11,7 @@ function ResetPassword() {
   const handleReset = async () => {
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/reset-password',
+        'https://employe-managment.onrender.com/api/auth/reset-password',
         { token, newPassword }
       );
       setMsg(res.data.message);
